@@ -1,7 +1,7 @@
 
 -- 基础设置
-require("basic.options")
-require("basic.keymaps")
+require("core.basic")
+require("core.keymaps")
 
 -- 插件
 require("plugins.plugins-setup")
