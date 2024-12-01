@@ -14,12 +14,15 @@ end
 local packer_bootstrap = ensure_packer()
 
 -- 保存此文件自动更新安装插件
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
-  augroup end
-]])
+pcall(
+  vim.cmd([[
+    augroup packer_user_config
+      autocmd!
+      autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
+    augroup end
+  ]])
+)
+
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim' -- 主题
