@@ -17,7 +17,8 @@ require("plugins.bufferline")
 require("plugins.gitsigns")
 require("plugins.telescope")
 
-
+-- neovide
+require("neovide")
 
 
 

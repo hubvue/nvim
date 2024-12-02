@@ -12,8 +12,8 @@ local opt = {noremap = true, silent = true}
 keymap("i", "jk", "<ESC>", opt)
 
 -- 跳到行首行尾
-keymap("i", "<C-h>", "<ESC>I", opt)
-keymap("i", "<C-l>", "<ESC>A", opt)
+keymap("i", "<D-h>", "<ESC>I", opt)
+keymap("i", "<D-l>", "<ESC>A", opt)
 
 -- ----------- 视觉模式 ---------------
 -- 选中单行或多行移动
@@ -66,13 +66,13 @@ keymap("n", "<leader>vt", ":vsp | terminal<CR>", opt)
 keymap("n", "<Esc>", "<C-\\><C-n>", opt) -- 不生效？
 
 -- 上下滚动浏览
-keymap("n", "<C-j>", "4j", opt)
-keymap("n", "<C-k>", "4k", opt)
-keymap("n", "<C-u>", "9k", opt)
-keymap("n", "<C-d>", "9j", opt)
+keymap("n", "<D-j>", "4j", opt)
+keymap("n", "<D-k>", "4k", opt)
+keymap("n", "<D-u>", "9k", opt)
+keymap("n", "<D-d>", "9j", opt)
 
 -- 保存
-keymap("n", "<leader>w", ":w<CR>", opt)
+keymap("n", "<D-s>", ":w<CR>", opt)
 
 -- 退出
 keymap("n", "<leader>q", ":q<CR>", opt)
@@ -80,11 +80,11 @@ keymap("n", "<leader>qq", ":q!<CR>", opt)
 keymap("n", "<leader>Q", ":qa!<CR>", opt)
 
 -- 保存并退出
-keymap("n", "<leader>wq", ":wq<CR>", opt)
+keymap("n", "<D-w>", ":q<CR>", opt)
 
 -- ----------- 插件 -----------------
 -- nvim-tree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opt)
+keymap("n", "<D-e>", ":NvimTreeToggle<CR>", opt)
 -- 切换buffer
 keymap("n", "<S-l>", ":bnext<CR>", opt)
 keymap("n", "<S-h>", ":bprevious<CR>", opt)
