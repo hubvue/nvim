@@ -85,6 +85,14 @@ keymap("n", "<D-w>", ":q<CR>", opt)
 -- ----------- 插件 -----------------
 -- nvim-tree
 keymap("n", "<D-e>", ":NvimTreeToggle<CR>", opt)
+
 -- 切换buffer
 keymap("n", "<S-l>", ":bnext<CR>", opt)
 keymap("n", "<S-h>", ":bprevious<CR>", opt)
+
+-- rustacean
+local bufnr = vim.api.nvim_get_current_buf()
+
+vim.keymap.set("n", "<leader>a", function ()
+  vim.cmd.RustLsp('codeAction')
+end, {silent = true, buffer = bufnr})

@@ -62,6 +62,7 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.8', -- 模糊搜索
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'mrcjkb/rustaceanvim'
   if packer_bootstrap then
     require('packer').sync()
   end
