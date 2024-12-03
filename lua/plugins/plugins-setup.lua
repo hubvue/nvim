@@ -26,16 +26,9 @@ pcall(
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim' -- 主题
-  use {
-    'nvim-lualine/lualine.nvim',  -- 状态栏
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true } -- 状态栏图标
-  }
-  use {
-    'nvim-tree/nvim-tree.lua',  -- 文档树
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- 文档数图标
-    },
-  }
+  use 'nvim-tree/nvim-web-devicons' -- 文档图标
+  use 'nvim-lualine/lualine.nvim'  -- 状态栏
+  use 'nvim-tree/nvim-tree.lua'  -- 文档树
   use 'christoomey/vim-tmux-navigator' -- 用 ctl-hjkl 来定位窗口
   use 'nvim-treesitter/nvim-treesitter' -- 语法高亮
   use 'p00f/nvim-ts-rainbow' -- 配合 treesitter 不同括号颜色区分

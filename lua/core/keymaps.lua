@@ -44,18 +44,13 @@ keymap("n", "<A-k>", "<C-w>k", opt)
 keymap("n", "<A-l>", "<C-w>l", opt)
 -- 调整窗口比例
 -- 左右比例
--- keymap("n", "<C-Left>", ":vertical resize -2<CR>", opt)
--- keymap("n", "<C-Right>", ":vertical resize +2<Cr>", opt)
-keymap("n", "s,", ":vertical resize -20<CR>", opt)
-keymap("n", "s.", ":vertical resize +20<CR>", opt)
+keymap("n", "vl", ":vertical resize -4<CR>", opt)
+keymap("n", "vh", ":vertical resize +4<CR>", opt)
 -- 上下比例
--- keymap("n", "<C-Down>", ":resize +2<CR>", opt)
--- keymap("n", "<C-Up>", ":resize -2<CR>", opt)
-keymap("n", "sj", ":resize +10<CR>", opt)
-keymap("n", "sk", ":resize -10<CR>", opt)
+keymap("n", "vk", ":resize +4<CR>", opt)
+keymap("n", "vj", ":resize -4<CR>", opt)
 -- 等比例
-keymap("n", "s=", "<C-w>=", opt)
-
+keymap("n", "w=", "<C-w>=", opt)
 
 -- 取消高亮
 keymap("n", "<leader>nh", ":nohl<CR>", opt)
@@ -75,12 +70,9 @@ keymap("n", "<D-d>", "9j", opt)
 keymap("n", "<D-s>", ":w<CR>", opt)
 
 -- 退出
-keymap("n", "<leader>q", ":q<CR>", opt)
+keymap("n", "q", ":q<CR>", opt)
 keymap("n", "<leader>qq", ":q!<CR>", opt)
 keymap("n", "<leader>Q", ":qa!<CR>", opt)
-
--- 保存并退出
-keymap("n", "<D-w>", ":q<CR>", opt)
 
 -- ----------- 插件 -----------------
 -- nvim-tree
