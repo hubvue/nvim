@@ -77,7 +77,7 @@ opt.termguicolors = true
 --  左侧多一列
 opt.signcolumn = "yes"
 -- 主题
-vim.cmd[[colorscheme tokyonight-moon]]
+vim.cmd[[colorscheme catppuccin-mocha]]
 
 
 

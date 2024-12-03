@@ -26,6 +26,10 @@ pcall(
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim' -- 主题
+  use {
+    'catppuccin/nvim',
+    as = 'catppuccin'
+  }
   use 'nvim-tree/nvim-web-devicons' -- 文档图标
   use 'nvim-lualine/lualine.nvim'  -- 状态栏
   use 'nvim-tree/nvim-tree.lua'  -- 文档树
@@ -56,7 +60,12 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'nvim-telescope/telescope-file-browser.nvim'
-  use 'mrcjkb/rustaceanvim'
+  use 'mrcjkb/rustaceanvim' -- rust lsp
+  use {
+    'VonHeikemen/fine-cmdline.nvim', -- cmdline
+    requires = {{ 'MunifTanjim/nui.nvim' }}
+  }
+
   if packer_bootstrap then
     require('packer').sync()
   end
