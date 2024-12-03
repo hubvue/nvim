@@ -5,7 +5,7 @@ vim.g.maplocalleader = " "
 local keymap = vim.api.nvim_set_keymap
 
 -- noremap=true 表示不会重新映射; silent=true表示不会输出多余的信息
-local opt = {noremap = true, silent = true}
+local opt = { noremap = true, silent = true }
 
 -- ----------- 插入模式 ---------------
 -- 将 ESC 键 改为 jk
@@ -44,13 +44,13 @@ keymap("n", "<A-k>", "<C-w>k", opt)
 keymap("n", "<A-l>", "<C-w>l", opt)
 -- 调整窗口比例
 -- 左右比例
-keymap("n", "vl", ":vertical resize -4<CR>", opt)
-keymap("n", "vh", ":vertical resize +4<CR>", opt)
+keymap("n", "s.", ":vertical resize -4<CR>", opt)
+keymap("n", "s,", ":vertical resize +4<CR>", opt)
 -- 上下比例
-keymap("n", "vk", ":resize +4<CR>", opt)
-keymap("n", "vj", ":resize -4<CR>", opt)
+keymap("n", "sk", ":resize +4<CR>", opt)
+keymap("n", "sj", ":resize -4<CR>", opt)
 -- 等比例
-keymap("n", "w=", "<C-w>=", opt)
+keymap("n", "s=", "<C-w>=", opt)
 
 -- 取消高亮
 keymap("n", "<leader>nh", ":nohl<CR>", opt)
@@ -58,7 +58,7 @@ keymap("n", "<leader>nh", ":nohl<CR>", opt)
 -- Terminal 相关
 keymap("n", "<leader>t", ":sp | terminal<CR>", opt)
 keymap("n", "<leader>vt", ":vsp | terminal<CR>", opt)
-keymap("n", "<Esc>", "<C-\\><C-n>", opt) -- 不生效？
+
 
 -- 上下滚动浏览
 keymap("n", "<D-j>", "4j", opt)
@@ -89,11 +89,9 @@ keymap("n", "<S-h>", ":bprevious<CR>", opt)
 -- rustacean
 local bufnr = vim.api.nvim_get_current_buf()
 
-vim.keymap.set("n", "<leader>a", function ()
+vim.keymap.set("n", "<leader>a", function()
   vim.cmd.RustLsp('codeAction')
-end, {silent = true, buffer = bufnr})
+end, { silent = true, buffer = bufnr })
 
 -- fine-cmdline
 keymap('n', ':', '<cmd>FineCmdline<Cr>', opt)
-
-
