@@ -1,7 +1,65 @@
+local status, telescope = pcall(require, 'telescope')
+
+if (not status) then return end
+
+local actions = require('telescope.actions')
 local builtin = require('telescope.builtin')
 
--- 进入telescope 是插入模式, 回到正常模式就可以通过j和k来移动了
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+local function telescope_buffer_dir()
+  return vim.fn.expand('%:p:h')
+end
+
+local fb_actions = require 'telescope'.extensions.file_browser.actions
+
+telescope.setup {
+  defaults = {
+    n = {
+      ['q'] = actions.close
+    },
+    initial_mode = 'normal'
+  },
+  extensions = {
+    file_browser = {
+      theme = 'dropdown',
+      hijack_netrw = true,
+      mappings = {
+        ['i'] = {
+
+        },
+        ['n'] = {
+
+        }
+      }
+    }
+  }
+}
+
+telescope.load_extension('file_browser')
+
+
+local opts = { noremap = true, silent = true }
+
+vim.keymap.set('n', ';f', function ()
+  builtin.find_files({
+    previewer = false,
+    no_ignore = false,
+    hidden = false
+  })
+end, opts)
+
+vim.keymap.set('n', ';r', builtin.live_grep, opts)
+vim.keymap.set('n', '////', builtin.buffers, opts)
+vim.keymap.set('n', ';t', builtin.help_tags, opts)
+vim.keymap.set('n', ';b', function ()
+  telescope.extensions.file_browser.file_browser({
+    path = "%:p:h",
+    cwd = telescope_buffer_dir(),
+    respect_git_ignore =false,
+    hidden = true,
+    grouped = true,
+    previewer = false,
+    layout_config = {
+      height = 40
+    }
+  })
+end, opts)

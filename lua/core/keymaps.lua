@@ -66,6 +66,10 @@ keymap("n", "<D-k>", "4k", opt)
 keymap("n", "<D-u>", "9k", opt)
 keymap("n", "<D-d>", "9j", opt)
 
+-- 跳转到行首行尾
+keymap("n", "<D-h>", "0", opt)
+keymap("n", "<D-l>", "$", opt)
+
 -- 保存
 keymap("n", "<D-s>", ":w<CR>", opt)
 
