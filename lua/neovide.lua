@@ -1,5 +1,5 @@
 -- 透明度
-vim.g.neovide_transparency = 0.4
+vim.g.neovide_transparency = 0.8
 
 -- 窗口模糊
 vim.g.neovide_window_blurred = true
