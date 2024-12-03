@@ -1,3 +1,5 @@
+-- 字体
+vim.o.guifont = "0xProto Nerd Font Mono"
 -- 透明度
 vim.g.neovide_transparency = 0.8
 
