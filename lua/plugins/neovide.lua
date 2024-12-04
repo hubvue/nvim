@@ -19,7 +19,7 @@ return {
         neovide_padding_right = 0,
         neovide_padding_left = 0,
         -- 透明度
-        neovide_transparency = 0.8,
+        neovide_transparency = 0.6,
         -- 窗口模糊
         neovide_window_blurred = true,
         neovide_floating_blur_amount_x = 1.0,
