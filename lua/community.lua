@@ -1,4 +1,4 @@
--- AsAstroCommunity: import any community modules here 
+-- AsAstroCommunity: import any community modules here
 -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
 -- This guarantees that the specs are processed before any user plugins.troCommunity: import any community modules here
 -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
@@ -10,6 +10,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.typescript" },
 
   -- import/override with your plugins folder
 }

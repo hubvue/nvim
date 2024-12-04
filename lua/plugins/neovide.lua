@@ -1,15 +1,10 @@
-if not vim.g.neovide then
-  print('unknown')
-  return {}
-end
+-- if not vim.g.neovide then return {} end
 
 return {
   "AstroNvim/astrocore",
   opts = {
     options = {
-      opt = {
-
-      },
+      opt = {},
       g = {
         -- 窗口模糊
         neovide_window_blurred = true,
