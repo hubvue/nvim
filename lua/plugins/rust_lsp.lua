@@ -1,21 +1,22 @@
-return {}
--- return {
---   { "simrat39/rust-tools.nvim", lazy = true }, -- lsp plugin
---   {
---     "AstroNvim/astrolsp",
---     ---@type AstroLSPOpts
---     opts = {
---       setup_handlers = {
---         rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
---       },
---     },
---   },
---   {
---     "williamboman/mason-lspconfig.nvim",
---     opts = {
---       ensure_installed = {
---         "rust_analyzer",
---       },
---     },
---   },
--- }
+return {
+  "AstroNvim/astrolsp",
+  opts = {
+    config = {
+      rust_analyzer = {
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = {
+              extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = "dev" },
+              extraArgs = { "--profile", "rust-analyzer" },
+            },
+          },
+        },
+      },
+    },
+    mappings = {
+      n = {
+        ["<Leader>lt"] = { "<cmd>lua vim.cmd('RustLsp testables')<CR>", desc = "Rust testables" },
+      },
+    },
+  },
+}

@@ -9,6 +9,8 @@ return {
     options = {
       opt = {
         linespace = 0,
+        guifont = "0xProto Nerd Font",
+        -- fontsize = 13,
       },
       g = {
         -- 比例因子
