@@ -11,6 +11,7 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.lsp.lspsaga-nvim" },
 
   -- import/override with your plugins folder
 }
