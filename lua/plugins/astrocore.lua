@@ -73,6 +73,8 @@ return {
         ["<D-d>"] = { "9j", desc = "down 9 line" },
         ["<D-j>"] = { "4j", desc = "down 4 line" },
         ["<D-k>"] = { "4k", desc = "up 4 line" },
+        ["<C-j>"] = { "4j", desc = "down 4 line" },
+        ["<C-k>"] = { "4k", desc = "up 4 line" },
       },
       i = {
         ["<C-h>"] = { "<ESC>I", desc = "jump line start" },
