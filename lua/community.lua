@@ -13,6 +13,8 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.lsp.lspsaga-nvim" },
   { import = "astrocommunity.motion.flash-nvim" },
+  { import = "astrocommunity.recipes.vscode" },
+  { import = "astrocommunity.test.neotest" },
 
   -- import/override with your plugins folder
 }

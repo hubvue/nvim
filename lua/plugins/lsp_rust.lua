@@ -15,7 +15,6 @@ return {
     },
     mappings = {
       n = {
-        ["<Leader>lt"] = { "<cmd>lua vim.cmd('RustLsp testables')<CR>", desc = "Rust testables" },
         ["<Leader>lw"] = { "<cmd>lua vim.cmd('RustLsp run')<CR>", desc = "Rust working" },
       },
     },
