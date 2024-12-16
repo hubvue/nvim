@@ -68,11 +68,6 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
-        ["<D-s>"] = { ":w<cr>", desc = "Save File" },
-        ["<D-u>"] = { "9k", desc = "up 9 line" },
-        ["<D-d>"] = { "9j", desc = "down 9 line" },
-        ["<D-j>"] = { "4j", desc = "down 4 line" },
-        ["<D-k>"] = { "4k", desc = "up 4 line" },
       },
       i = {
         ["<C-h>"] = { "<ESC>I", desc = "jump line start" },

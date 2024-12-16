@@ -36,5 +36,14 @@ return {
         neovide_cursor_trail_size = 0.8,
       },
     },
+    mappings = {
+      n = {
+        ["<D-s>"] = { ":w<cr>", desc = "Save File" },
+        ["<D-u>"] = { "9k", desc = "up 9 line" },
+        ["<D-d>"] = { "9j", desc = "down 9 line" },
+        ["<D-j>"] = { "4j", desc = "down 4 line" },
+        ["<D-k>"] = { "4k", desc = "up 4 line" },
+      },
+    },
   },
 }
