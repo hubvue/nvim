@@ -23,7 +23,7 @@ return {
         -- 透明度
         neovide_transparency = 0.6,
         -- 窗口模糊
-        neovide_window_blurred = true,
+        neovide_window_blurred = false,
         neovide_floating_blur_amount_x = 1.0,
         neovide_floating_blur_amoutn_y = 1.0,
         -- 浮动阴影
