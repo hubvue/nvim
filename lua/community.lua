@@ -19,4 +19,5 @@ return {
   { import = "astrocommunity.test.neotest" },
   -- { import = "astrocommunity.completion.copilot-cmp" },
   { import = "astrocommunity.editing-support.refactoring-nvim" },
+  { import = "astrocommunity.utility.noice-nvim" },
 }
