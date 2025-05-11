@@ -58,6 +58,9 @@ return {
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        ["d"] = { '"_d', desc = "Delete without yanking" },
+        ["c"] = { '"_c', desc = "Change without yanking" },
+        ["x"] = { '"_x', desc = "Delete char without yanking" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
@@ -77,6 +80,9 @@ return {
         -- 选中单行或多行移动
         ["J"] = { ":m '>+1<CR>gv=gv", desc = "Down move" },
         ["K"] = { ":m '<-2<CR>gv=gv", desc = "Up move" },
+        ["d"] = { '"_d', desc = "Delete without yanking" },
+        ["c"] = { '"_c', desc = "Change without yanking" },
+        ["x"] = { '"_x', desc = "Delete char without yanking" },
       },
     },
   },

@@ -20,4 +20,5 @@ return {
   -- { import = "astrocommunity.completion.copilot-cmp" },
   { import = "astrocommunity.editing-support.refactoring-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.completion.blink-cmp" },
 }
