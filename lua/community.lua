@@ -17,7 +17,7 @@ return {
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.recipes.vscode" },
   { import = "astrocommunity.test.neotest" },
-  -- { import = "astrocommunity.completion.copilot-cmp" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.editing-support.refactoring-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.completion.blink-cmp" },
